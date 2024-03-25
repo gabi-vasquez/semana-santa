@@ -17,10 +17,10 @@ import Layout from "../layouts/Layout.astro";
           en fechas variables entre el 22 de marzo y el 25 de abril.
         </p>
       </section>
-      <img src="semana.webp" alt="Logo de la semana santa de Popayán" />
+      <img src="/semana.webp" alt="Logo de la semana santa de Popayán" />
     </div>
     <div class="que-se-hace">
-      <img src="muchacha.webp" alt="Logo de la semana santa de Popayán" />
+      <img src="/muchacha.webp" alt="Logo de la semana santa de Popayán" />
 
       <section>
         <h2>¿Que se hace en la semana santa?</h2>
@@ -44,22 +44,12 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  h1 {
-    text-align: center;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50rem;
-    margin: 0 auto;
-  }
   .que-es {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 1rem;
   }
   .que-se-hace {
     display: flex;
@@ -67,16 +57,7 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     gap: 2rem;
   }
-
   img {
     width: 300px;
-  }
-
-  h2 {
-    text-wrap: balance;
-  }
-
-  p {
-    text-wrap: pretty;
   }
 </style>

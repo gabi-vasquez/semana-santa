@@ -1,106 +1,102 @@
 ---
+
 ---
-<div class="container">
-    <a href="/"><img src="/logo.webp" alt="Logo página web semana santa" /></a>
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li>
-                Iglesias
-                <ul>
-                    <li><a href="/iglesias/belen">Santuario de Belén</a></li>
-                    <li><a href="/iglesias/ermita">Iglesia La Ermita</a></li>
-                    <li><a href="/iglesias/san-francisco">Iglesia de San Francisco</a></li>
-                    <li><a href="/iglesias/san-agustin">Iglesia de San Agustín</a></li>
-                    <li><a href="/iglesias/catedral">Catedral basílica de Nuestra Señora de la Asunción de Popayán</a></li>
-                    <li><a href="/iglesias/santo-domingo">Iglesia de Santo Domingo</a></li>
-                </ul>
-            </li>
-            <li>Artesanias
-                <ul>
-                    <li><a href="/artesanias/manos-oro">Manos de Oro</a></li>
-                    <li><a href="/artesanias/inem">Inem</a></li>
-                    <li><a href="/artesanias/casa-moneda">Casa de la moneda</a></li>
-                </ul>
-            </li>
+<nav>
+    <div class="logo">
+      <a href="#"><img src="/logo.webp" alt="Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="/">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#">Iglesias</a>
+        <ul class="submenu">
+          <li><a href="/iglesias/belen">Santuario de Belén</a></li>
+          <li><a href="/iglesias/catedral">Catedral basílica de Nuestra Señora de la Asunción</a></li>
+          <li><a href="/iglesias/ermita">Iglesia de La Ermita</a></li>
+          <li><a href="/iglesias/san-agustin">Iglesia de San Agustín</a></li>
+          <li><a href="/iglesias/san-francisco">Iglesia de San Francisco</a></li>
+          <li><a href="/iglesias/santo-domingo">Iglesia de Santo Domingo</a></li>
         </ul>
-    </nav>
-</div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Artesanias</a>
+        <ul class="submenu">
+          <li><a href="/artesanias/manos-oro">Manos de ORO</a></li>
+          <li><a href="/artesanias/casa-moneda">Casa de la Moneda</a></li>
+          <li><a href="/artesanias/inem">INEM</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+nav {
+  background-color: #fff;
+  color: black;
+  border-bottom: 5px solid #AE8625;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 2rem;
+}
 
-    .container {
-        display: flex;
-        color: white;
-    }
-    
-    nav {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: #AE8625;
-        height: 100px;
-    }
+.logo img {
+    margin-top: 5px;
+    max-height: 60px;
+    border-radius: 50%;
+}
 
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 
+.menu > li {
+  position: relative;
+  list-style: none;
+}
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.menu > li > a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 400;
+}
 
-    nav ul li {
-        margin-right: 2rem;
-        font-size: 1.5rem;
-        font-weight: bold;
-        display: inline;
-        position: relative;
-    }
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  text-align: left;
+}
 
-    nav ul li a {
-        text-decoration: none;
-        padding: 10px;
-        display: inline-block;
-    }
+.submenu li {
+  list-style: none;
+}
 
-    nav ul li ul {
-        width: 200px;
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #AE8625;
-    }
+.submenu li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
 
-    nav ul li:hover ul {
-        display: block;
-    }
+.submenu li a:hover {
+  background-color: #f5f5f5;
+}
 
-    nav ul li ul li {
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0.2rem;
-        border: 2px solid white;
-        display: block;
-    }
-
-    nav ul li ul li a {
-        display: block;
-    }
-
-    img {
-        object-fit: cover;
-        height: 100px;
-    }
-
-    a {
-        color: white;
-    }
+.dropdown:hover .submenu {
+  display: block;
+}
 </style>

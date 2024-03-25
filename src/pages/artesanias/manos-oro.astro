@@ -1,11 +1,21 @@
 ---
+import Collage from "../../components/Collage.astro";
 import Layout from "../../layouts/Layout.astro";
+
+const images = [
+  "/artesanias/manos-oro/1manos.jpeg",
+  "/artesanias/manos-oro/2manos.jpeg",
+  "/artesanias/manos-oro/3manos.jpeg",
+  "/artesanias/manos-oro/4manos.jpeg",
+];
 ---
 
 <Layout title="manos-oro">
   <main>
     <section>
       <h1>Manos de oro</h1>
+
+      <Collage images={images} />
       <p>
         "Manos de Oro, es uno de los componentes de la Fundación Junta
         Permanente Pro Semana Santa de Popayán,en donde su principal objetivo se

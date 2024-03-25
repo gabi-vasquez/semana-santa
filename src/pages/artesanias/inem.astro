@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Collage from "../../components/Collage.astro";
+
+const images = [
+  "/artesanias/inem/1inem.jpeg",
+  "/artesanias/inem/2inem.jpeg",
+  "/artesanias/inem/3inem.jpeg",
+  "/artesanias/inem/4inem.jpeg",
+];
+---
+
+<Layout title="Artesanias | INEM">
+  <main>
+    <section>
+      <h1>Inem</h1>
+      <Collage images={images} />
+      <p>
+        Un escenario de negocios, experimentos y entretenimiento para la
+        familia, donde encontrarás artesanías, gastronomía, artículos para el
+        hogar, tecnología, proyectos agroindustriales y de innovación.
+      </p>
+      <p>Apoyado por ExpoCauca.</p>
+    </section>
+  </main>
+</Layout>

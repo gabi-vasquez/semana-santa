@@ -1,0 +1,54 @@
+---
+const images = Astro.props.images
+---
+
+<div class="grid-container">
+  <div class="image-row">
+    <img
+      src={images[0]}
+      alt="Imagen horizontal"
+    />
+  </div>
+  <div class="image-column">
+    <img
+      src={images[1]}
+      alt="Imagen 1"
+    />
+  </div>
+  <div class="image-column">
+    <img
+      src={images[2]}
+      alt="Imagen 2"
+    />
+  </div>
+  <div class="image-column">
+    <img
+      src={images[3]}
+      alt="Imagen 3"
+    />
+  </div>
+</div>
+
+<style>
+  .grid-container {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .image-row {
+    grid-column: 1 / span 3;
+  }
+
+  .image-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-column img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+</style>

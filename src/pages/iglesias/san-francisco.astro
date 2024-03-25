@@ -1,5 +1,13 @@
 ---
+import Collage from "../../components/Collage.astro";
 import Layout from "../../layouts/Layout.astro";
+
+const images = [
+  "/iglesias/francisco/1-sf.jpg",
+  "/iglesias/francisco/2-sf.jpeg",
+  "/iglesias/francisco/3-sf.jpeg",
+  "/iglesias/francisco/4-sf.jpeg",
+]
 ---
 
 <Layout title="San Francisco">
@@ -7,7 +15,7 @@ import Layout from "../../layouts/Layout.astro";
     <section>
       <h1>Iglesias procesionales</h1>
       <h2>San Francisco de Asís</h2>
-      <img src="/iglesias/sanfrancisco.webp" alt="San Francisco de Asís" />
+      <Collage images={images} />
       <p>
         "La iglesia fue construida en el siglo XVI y luego reconstruida entre
         1765 y 1788. Su arquitecto fue Fray Antonio García. El estilo barroco

@@ -1,16 +1,13 @@
 ---
-import Carousel from "../../components/Carousel.astro";
+import Collage from "../../components/Collage.astro";
 import Layout from "../../layouts/Layout.astro";
 
 // create a list of strings
 const images = [
-  "/iglesias/santo-domingo/santodomingo1.webp",
-  "/iglesias/santo-domingo/santodomingo2.webp",
-  "/iglesias/santo-domingo/santodomingo3.webp",
-  "/iglesias/santo-domingo/santodomingo4.webp",
-  "/iglesias/santo-domingo/santodomingo5.webp",
-  "/iglesias/santo-domingo/santodomingo6.webp",
-  "/iglesias/santo-domingo/santodomingo7.webp",
+  "/iglesias/santo-domingo/1-sd.jpg",
+  "/iglesias/santo-domingo/2-sd.jpeg",
+  "/iglesias/santo-domingo/3-sd.jpeg",
+  "/iglesias/santo-domingo/4-sd.jpeg",
 ];
 ---
 
@@ -19,9 +16,7 @@ const images = [
     <section>
       <h1>Iglesias procesionales</h1>
       <h2>Iglesia de Santo Domingo</h2>
-      <div class="carousel">
-      <Carousel images={images} />
-      </div>
+      <Collage images={images} />
       <p>
         "La Iglesia de Santo Domingo es una de las protagonistas durante la
         Semana Santa en Popayán. La cual posee una arquitectura renacentista y

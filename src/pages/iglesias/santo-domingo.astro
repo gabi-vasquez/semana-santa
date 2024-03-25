@@ -1,0 +1,62 @@
+---
+import Carousel from "../../components/Carousel.astro";
+import Layout from "../../layouts/Layout.astro";
+
+// create a list of strings
+const images = [
+  "/iglesias/santo-domingo/santodomingo1.webp",
+  "/iglesias/santo-domingo/santodomingo2.webp",
+  "/iglesias/santo-domingo/santodomingo3.webp",
+  "/iglesias/santo-domingo/santodomingo4.webp",
+  "/iglesias/santo-domingo/santodomingo5.webp",
+  "/iglesias/santo-domingo/santodomingo6.webp",
+  "/iglesias/santo-domingo/santodomingo7.webp",
+];
+---
+
+<Layout title="Santo Domingo">
+  <main>
+    <section>
+      <h1>Iglesias procesionales</h1>
+      <h2>Iglesia de Santo Domingo</h2>
+      <div class="carousel">
+      <Carousel images={images} />
+      </div>
+      <p>
+        "La Iglesia de Santo Domingo es una de las protagonistas durante la
+        Semana Santa en Popayán. La cual posee una arquitectura renacentista y
+        barroca, construida en roca volcánica entre 1556 y 1609, es el punto de
+        partida de las procesiones que se toman las calles empedradas del centro
+        histórico. <br />Año tras año, desde este templo declarado Patrimonio
+        Nacional en 1959, salen los desfiles de Semana Santa con sus tallas,
+        estandartes y fieles cargando pasos. El interior de la iglesia, con su
+        enorme nave central de altos techos adornados y sus altares tallados en
+        madera.🙏🕍"
+      </p>
+      <p><strong>Direccion:</strong> Calle 4,#4-70, Centro,Popayán,Cauca<br/>
+        <strong>Horarios:</strong>Lunes a Sabado de 7:00 a.m a 5:00 p.m y los
+        Domingos de 10:30 a.m a 12:30 p.m
+      </p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+    p{
+        max-width: 50rem;
+    }
+</style>

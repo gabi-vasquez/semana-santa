@@ -1,0 +1,106 @@
+---
+---
+<div class="container">
+    <a href="/"><img src="/logo.webp" alt="Logo página web semana santa" /></a>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li>
+                Iglesias
+                <ul>
+                    <li><a href="/iglesias/belen">Santuario de Belén</a></li>
+                    <li><a href="/iglesias/ermita">Iglesia La Ermita</a></li>
+                    <li><a href="/iglesias/san-francisco">Iglesia de San Francisco</a></li>
+                    <li><a href="/iglesias/san-agustin">Iglesia de San Agustín</a></li>
+                    <li><a href="/iglesias/catedral">Catedral basílica de Nuestra Señora de la Asunción de Popayán</a></li>
+                    <li><a href="/iglesias/santo-domingo">Iglesia de Santo Domingo</a></li>
+                </ul>
+            </li>
+            <li>Artesanias
+                <ul>
+                    <li><a href="/artesanias/manos-oro">Manos de Oro</a></li>
+                    <li><a href="/artesanias/inem">Inem</a></li>
+                    <li><a href="/artesanias/casa-moneda">Casa de la moneda</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        color: white;
+    }
+    
+    nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #AE8625;
+        height: 100px;
+    }
+
+
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: inline;
+        position: relative;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    nav ul li ul {
+        width: 200px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #AE8625;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    nav ul li ul li {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0.2rem;
+        border: 2px solid white;
+        display: block;
+    }
+
+    nav ul li ul li a {
+        display: block;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100px;
+    }
+
+    a {
+        color: white;
+    }
+</style>

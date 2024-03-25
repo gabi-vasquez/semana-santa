@@ -1,0 +1,81 @@
+---
+// Import necessary scripts and styles here
+const images = Astro.props.images; // Assume images is an array of image URLs passed as a prop
+---
+
+<div class="carousel-container">
+  <div class="carousel-slide">
+    {
+      images.map((image: string, index: number) => (
+        <img class="carousel-image" src={image} alt={`Slide ${index + 1}`} />
+      ))
+    }
+  </div>
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+<style>
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    display: flex;
+  }
+
+  .carousel-image {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px 0;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<script is:inline>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".carousel-image");
+
+  function showSlide(index) {
+    if (index >= slides.length) currentSlide = 0;
+    if (index < 0) currentSlide = slides.length - 1;
+
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
+    });
+  }
+
+  function changeSlide(n) {
+    currentSlide += n;
+    showSlide(currentSlide);
+  }
+
+  showSlide(currentSlide); // Initial call to show the first slide
+</script>
